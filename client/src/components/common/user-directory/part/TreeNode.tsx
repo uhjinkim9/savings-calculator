@@ -1,6 +1,6 @@
 "use client";
-import styles from "../styles/OrgTreeSelect.module.scss";
-import {OrgTreeType} from "../types/organization.type";
+import styles from "../styles/UserDirectorySelect.module.scss";
+import {UserDirectoryTreeType} from "../types/user-directory.type";
 import {FaChevronDown, FaChevronRight, FaStar, FaFolder} from "react-icons/fa6";
 import {motion, AnimatePresence} from "framer-motion";
 import Button from "../../form-properties/Button";
@@ -15,7 +15,7 @@ type SelectedTarget = {
 };
 
 type Props = {
-	node: OrgTreeType;
+	node: UserDirectoryTreeType;
 	level: number;
 	expanded: Record<string, boolean>;
 	toggle: (deptCd: string) => void;

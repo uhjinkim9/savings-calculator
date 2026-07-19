@@ -18,7 +18,7 @@ import InputBasic from "@/components/common/form-properties/InputBasic";
 import Divider from "@/components/common/segment/Divider";
 import useModal from "@/hooks/useModal";
 import Modal from "@/components/common/layout/Modal";
-import OrgTreeSelect from "@/components/common/company-related/OrgTreeSelect";
+import UserDirectorySelect from "@/components/common/user-directory/UserDirectorySelect";
 import CommonButtonGroup from "@/components/common/segment/CommonButtonGroup";
 
 const ListHeader = memo(
@@ -316,8 +316,8 @@ export default function AdminAttendanceUser() {
     });
   };
 
-  // OrgTreeSelect 값 변경 핸들러 (다중 유저 지원)
-  const onChangeOrgSelect = (e: React.ChangeEvent<any>) => {
+  // UserDirectorySelect 값 변경 핸들러 (다중 유저 지원)
+  const onChangeUserDirectorySelect = (e: React.ChangeEvent<any>) => {
     const {value} = e.target;
     setSelectedUsersForAdd({
       userIds: value.userIds || [],
@@ -806,9 +806,9 @@ export default function AdminAttendanceUser() {
           <div style={{padding: "1rem"}}>
             <h4>추가할 유저를 선택해주세요</h4>
             <Divider type="middle" />
-            <OrgTreeSelect
+            <UserDirectorySelect
               label="유저 선택"
-              onChange={onChangeOrgSelect}
+              onChange={onChangeUserDirectorySelect}
               multi={true}
               value={selectedUsersForAdd}
               width="100%"

@@ -17,7 +17,7 @@ import DateTimeRangePicker from "@/components/common/form-properties/DateTimeRan
 import SelectBox from "@/components/common/form-properties/SelectBox";
 import Toggle from "@/components/common/form-properties/Toggle";
 import Radio from "@/components/common/form-properties/Radio";
-import OrgTreeSelect from "@/components/common/company-related/OrgTreeSelect";
+import UserDirectorySelect from "@/components/common/user-directory/UserDirectorySelect";
 import InputBasic from "@/components/common/form-properties/InputBasic";
 import {
 	RepeatIntervalInput,
@@ -396,7 +396,7 @@ export default function AddNewSchedule({
 			</div>
 
 			<div className={styles.row}>
-				<OrgTreeSelect
+				<UserDirectorySelect
 					onChange={onChangeSchedule}
 					buttonLabel="선택"
 					inputLabel="내부 참석자"
@@ -405,7 +405,7 @@ export default function AddNewSchedule({
 						joinDeptCd: schedule?.joinDeptCd,
 					}}
 					multi
-				></OrgTreeSelect>
+				></UserDirectorySelect>
 			</div>
 
 			<InputBasic

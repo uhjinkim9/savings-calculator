@@ -1,8 +1,8 @@
 "use client";
 import {useEffect, useMemo, useState} from "react";
-import styles from "./styles/OrgTreeView.module.scss";
+import styles from "./styles/UserDirectoryView.module.scss";
 import {RiOrganizationChart} from "react-icons/ri";
-import {DeptType, EmpType, OrgTreeType} from "./types/organization.type";
+import {DeptType, EmpType, UserDirectoryTreeType} from "./types/user-directory.type";
 import {externalPost} from "@/util/api/api-service";
 import {isEmpty} from "@/util/validators/check-empty";
 import FilteredResult from "./part/FilteredResult";
@@ -12,10 +12,10 @@ import useModal from "@/hooks/useModal";
 import ProfileCard from "./ProfileCard";
 
 type Props = {
-	orgTreeViewModal: any;
+	userDirectoryModal: any;
 };
 
-export default function OrgTreeView({orgTreeViewModal}: Props) {
+export default function UserDirectoryView({userDirectoryModal}: Props) {
 	const [lists, setLists] = useState<{
 		deptList: DeptType[];
 		empList: EmpType[];
@@ -31,13 +31,13 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 	});
 	const [searchWord, setSearchWord] = useState("");
 
-	async function getOrgTreeData() {
+	async function getUserDirectoryData() {
 		const res = await externalPost("/apiKey/hr/erpOrgTree.do");
 		if (res?.data) setLists(res.data);
 	}
 
 	useEffect(() => {
-		getOrgTreeData();
+		getUserDirectoryData();
 	}, []);
 
 	function toggle(deptCd: string) {
@@ -58,7 +58,7 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 		);
 
 		if (matchedEmps.length > 0 || matchedDepts.length > 0) {
-			orgTreeViewModal.openModal();
+			userDirectoryModal.openModal();
 		}
 	};
 
@@ -68,7 +68,7 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 		}
 	}
 
-	const treeRepeater = (list: DeptType[]): OrgTreeType[] => {
+	const treeRepeater = (list: DeptType[]): UserDirectoryTreeType[] => {
 		const tree = list.map((dept) => {
 			const emps = empList.filter(
 				(emp) => dept.deptCd === emp.deptCd && emp.empType !== "6"
@@ -81,12 +81,12 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 				mngEmpNo: dept.mngEmpNo,
 				emps: emps,
 				children: children(dept.deptCd || ""),
-			} as OrgTreeType;
+			} as UserDirectoryTreeType;
 		});
 		return tree;
 	};
 
-	function children(upperCd: string): OrgTreeType[] {
+	function children(upperCd: string): UserDirectoryTreeType[] {
 		const levelDepts = deptList.filter(
 			(dept) => dept.upperDeptCd === upperCd
 		);
@@ -94,7 +94,7 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 		return tree;
 	}
 
-	const buildTree = (): OrgTreeType[] => {
+	const buildTree = (): UserDirectoryTreeType[] => {
 		const topNodes = lists.deptList.filter((dept) =>
 			isEmpty(dept.upperDeptCd)
 		);
@@ -145,8 +145,8 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 		</span>
 	);
 
-	const openOrgTree = () => {
-		orgTreeViewModal.openModal();
+	const openUserDirectory = () => {
+		userDirectoryModal.openModal();
 	};
 
 	const profileCardModal = useModal();
@@ -164,17 +164,17 @@ export default function OrgTreeView({orgTreeViewModal}: Props) {
 	return (
 		<>
 			{/* 조직도 열기 버튼 */}
-			<button className={styles.orgButton} onClick={openOrgTree}>
+			<button className={styles.directoryButton} onClick={openUserDirectory}>
 				<span>
-					<RiOrganizationChart className={styles.orgIcon} />
+					<RiOrganizationChart className={styles.directoryIcon} />
 				</span>{" "}
-				<span className={styles.orgButtonText}>조직도</span>
+				<span className={styles.directoryButtonText}>조직도</span>
 			</button>
 
 			{/* 조직도 모달 내용 */}
 			<Modal
-				closeModal={orgTreeViewModal.closeModal}
-				modalConfig={orgTreeViewModal.modalConfig}
+				closeModal={userDirectoryModal.closeModal}
+				modalConfig={userDirectoryModal.modalConfig}
 				width="30vw"
 				height="55vh"
 			>

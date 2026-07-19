@@ -11,7 +11,7 @@ import {SideBarMenuType} from "@/types/menu.type";
 
 import SelectBoxBasic from "@/components/common/form-properties/SelectBoxBasic";
 import InputBasic from "@/components/common/form-properties/InputBasic";
-import OrgTreeSelect from "@/components/common/company-related/OrgTreeSelect";
+import UserDirectorySelect from "@/components/common/user-directory/UserDirectorySelect";
 import InputTextArea from "@/components/common/form-properties/InputTextArea";
 
 
@@ -145,7 +145,7 @@ export default function AddBoard() {
 				></InputTextArea>
 			</div>
 			<div className={styles.row}>
-				<OrgTreeSelect
+				<UserDirectorySelect
 					multi={true}
 					label="공개 대상"
 					value={{

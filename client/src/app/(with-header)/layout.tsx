@@ -7,13 +7,13 @@ import {PlanProvider} from "@/context/PlanContext";
 import {AlertProvider} from "@/context/AlertContext";
 
 import Header from "@/components/common/layout/Header";
-import OrgTreeView from "@/components/common/company-related/OrgTreeView";
+import UserDirectoryView from "@/components/common/user-directory/UserDirectoryView";
 
 import AlertPortal from "@/portals/AlertPortal";
 import useModal from "@/hooks/useModal";
 
 export default function CommonLayout({children}: {children: React.ReactNode}) {
-	const orgTreeViewModal = useModal();
+	const userDirectoryModal = useModal();
 
 	return (
 		<>
@@ -25,8 +25,8 @@ export default function CommonLayout({children}: {children: React.ReactNode}) {
 							<main className={styles.main}>
 								<Header></Header>
 								{children}
-								<OrgTreeView
-									orgTreeViewModal={orgTreeViewModal}
+								<UserDirectoryView
+									userDirectoryModal={userDirectoryModal}
 								/>
 							</main>
 						</PlanProvider>

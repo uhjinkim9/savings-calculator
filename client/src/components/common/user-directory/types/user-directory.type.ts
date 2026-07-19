@@ -21,13 +21,13 @@ export type DeptType = {
 	korNm?: string;
 };
 
-export type OrgTreeType = {
+export type UserDirectoryTreeType = {
 	deptCd?: string;
 	deptNm?: string;
 	upperDeptCd?: string;
 	mngEmpNo?: string;
 	emps?: TreeEmpType[];
-	children?: OrgTreeType[];
+	children?: UserDirectoryTreeType[];
 };
 
 export type TreeEmpType = {

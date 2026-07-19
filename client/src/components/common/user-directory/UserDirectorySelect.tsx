@@ -1,5 +1,5 @@
 "use client";
-import styles from "./styles/OrgTreeSelect.module.scss";
+import styles from "./styles/UserDirectorySelect.module.scss";
 import {useEffect, useMemo, useState} from "react";
 import clsx from "clsx";
 
@@ -8,11 +8,11 @@ import {externalPost} from "@/util/api/api-service";
 import {
 	DeptType,
 	EmpType,
-	OrgTreeType,
+	UserDirectoryTreeType,
 	SelectedDept,
 	SelectedEmp,
 	SelectedTarget,
-} from "./types/organization.type";
+} from "./types/user-directory.type";
 import useModal from "@/hooks/useModal";
 
 import Modal from "../layout/Modal";
@@ -21,7 +21,7 @@ import ButtonBasic from "../form-properties/ButtonBasic";
 import TreeNode from "./part/TreeNode";
 import FilteredResult from "./part/FilteredResult";
 
-export default function OrgTreeSelect<T>({
+export default function UserDirectorySelect<T>({
 	onChange,
 	multi = false,
 	buttonLabel = "선택",
@@ -113,7 +113,7 @@ export default function OrgTreeSelect<T>({
 
 	const {openModal, closeModal, modalConfig} = useModal();
 
-	async function getOrgTreeData() {
+	async function getUserDirectoryData() {
 		const res = await externalPost("/apiKey/hr/erpOrgTree.do");
 		if (res?.data) setLists(res.data);
 	}
@@ -123,7 +123,7 @@ export default function OrgTreeSelect<T>({
 	}, [lists]);
 
 	useEffect(() => {
-		getOrgTreeData();
+		getUserDirectoryData();
 	}, []);
 
 	function toggle(deptCd: string) {
@@ -367,7 +367,7 @@ export default function OrgTreeSelect<T>({
 		}
 	}
 
-	const treeRepeater = (list: DeptType[]): OrgTreeType[] => {
+	const treeRepeater = (list: DeptType[]): UserDirectoryTreeType[] => {
 		const tree = list.map((dept) => {
 			const emps = empList.filter(
 				(emp) => dept.deptCd === emp.deptCd && emp.empType !== "6"
@@ -380,12 +380,12 @@ export default function OrgTreeSelect<T>({
 				mngEmpNo: dept.mngEmpNo,
 				emps: emps,
 				children: children(dept.deptCd || ""),
-			} as OrgTreeType;
+			} as UserDirectoryTreeType;
 		});
 		return tree;
 	};
 
-	function children(upperCd: string): OrgTreeType[] {
+	function children(upperCd: string): UserDirectoryTreeType[] {
 		const levelDepts = deptList.filter(
 			(dept) => dept.upperDeptCd === upperCd
 		);
@@ -393,7 +393,7 @@ export default function OrgTreeSelect<T>({
 		return tree;
 	}
 
-	const buildTree = (): OrgTreeType[] => {
+	const buildTree = (): UserDirectoryTreeType[] => {
 		const topNodes = lists.deptList.filter((dept) =>
 			isEmpty(dept.upperDeptCd)
 		);
