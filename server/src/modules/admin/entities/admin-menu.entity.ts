@@ -72,8 +72,7 @@ export class AdminMenuEntity {
   /** 메뉴 사용 여부 */
   @Column({
     name: "is_used",
-    type: "tinyint",
-    width: 1,
+    type: "smallint",
     default: 1,
     nullable: false,
     comment: "메뉴 사용 여부",
@@ -108,10 +107,10 @@ export class AdminMenuEntity {
   })
   updaterId: string;
 
-  @CreateDateColumn({name: "created_at", type: "datetime"})
+  @CreateDateColumn({name: "created_at", type: "timestamp"})
   createdAt: Date;
 
-  @UpdateDateColumn({name: "updated_at", type: "datetime"})
+  @UpdateDateColumn({name: "updated_at", type: "timestamp"})
   updatedAt: Date;
 
   /** 자기 참조 */

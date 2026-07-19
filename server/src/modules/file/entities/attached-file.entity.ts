@@ -68,7 +68,7 @@ export class AttachedFileEntity {
   /** 업로드일 */
   @CreateDateColumn({
     name: 'created_at',
-    type: 'datetime',
+    type: 'timestamp',
     comment: '업로드일',
   })
   createdAt: Date;

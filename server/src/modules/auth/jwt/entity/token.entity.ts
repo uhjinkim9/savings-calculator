@@ -74,7 +74,7 @@ export class TokenEntity {
   // /** 발급 일자 */
   // @Column({
   //   name: 'issue_date',
-  //   type: 'datetime',
+  //   type: 'timestamp',
   //   nullable: true,
   //   comment: '발급 일자',
   // })
@@ -83,17 +83,17 @@ export class TokenEntity {
   // /** 만료 일자 */
   // @Column({
   //   name: 'expire_date',
-  //   type: 'datetime',
+  //   type: 'timestamp',
   //   nullable: true,
   //   comment: '만료 일자',
   // })
   // expireDate: Date;
 
   /** 생성일 */
-  @CreateDateColumn({ name: 'created_at', type: 'datetime', comment: '생성일' })
+  @CreateDateColumn({ name: 'created_at', type: 'timestamp', comment: '생성일' })
   createdAt: Date;
 
   /** 변경일 */
-  @UpdateDateColumn({ name: 'updated_at', type: 'datetime', comment: '변경일' })
+  @UpdateDateColumn({ name: 'updated_at', type: 'timestamp', comment: '변경일' })
   updatedAt: Date;
 }

@@ -64,7 +64,7 @@ export class RoleMenuMapEntity {
   // /** 읽기 권한 */
   // @Column({
   //   name: 'is_readable',
-  //   type: 'tinyint',
+  //   type: 'smallint',
   //   width: 1,
   //   default: 1,
   //   nullable: false,
@@ -75,7 +75,7 @@ export class RoleMenuMapEntity {
   // /** 쓰기 권한 */
   // @Column({
   //   name: 'is_writable',
-  //   type: 'tinyint',
+  //   type: 'smallint',
   //   width: 1,
   //   default: 1,
   //   nullable: false,
@@ -86,8 +86,7 @@ export class RoleMenuMapEntity {
   /** 사용자 */
   @Column({
     name: 'role_user',
-    type: 'tinyint',
-    width: 1,
+    type: 'smallint',
     default: 1,
     nullable: false,
     comment: '역할 구분: 사용자',
@@ -97,8 +96,7 @@ export class RoleMenuMapEntity {
   /** 관리자 */
   @Column({
     name: 'role_admin',
-    type: 'tinyint',
-    width: 1,
+    type: 'smallint',
     default: 1,
     nullable: false,
     comment: '역할 구분: 관리자',
@@ -108,8 +106,7 @@ export class RoleMenuMapEntity {
   /** 사용 여부 */
   @Column({
     name: 'is_used',
-    type: 'tinyint',
-    width: 1,
+    type: 'smallint',
     default: 1,
     comment: '사용 여부',
   })
@@ -118,7 +115,7 @@ export class RoleMenuMapEntity {
   /** 생성일 */
   @CreateDateColumn({
     name: 'created_at',
-    type: 'datetime',
+    type: 'timestamp',
     comment: '생성일',
   })
   createdAt: Date;
@@ -126,14 +123,14 @@ export class RoleMenuMapEntity {
   /** 변경일 */
   @UpdateDateColumn({
     name: 'updated_at',
-    type: 'datetime',
+    type: 'timestamp',
     comment: '변경일',
   })
   updatedAt: Date;
 
   @DeleteDateColumn({
     name: 'deleted_at',
-    type: 'datetime',
+    type: 'timestamp',
   })
   deletedAt?: Date;
 

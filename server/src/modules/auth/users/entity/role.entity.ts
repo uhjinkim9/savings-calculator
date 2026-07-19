@@ -64,8 +64,7 @@ export class RoleEntity {
   /** 사용 여부 */
   @Column({
     name: 'is_used',
-    type: 'tinyint',
-    width: 1,
+    type: 'smallint',
     default: 1,
     nullable: false,
     comment: '사용 여부',
@@ -75,7 +74,7 @@ export class RoleEntity {
   /** 생성일 */
   @CreateDateColumn({
     name: 'created_at',
-    type: 'datetime',
+    type: 'timestamp',
     comment: '생성일',
   })
   createdAt: Date;
@@ -83,14 +82,14 @@ export class RoleEntity {
   /** 변경일 */
   @UpdateDateColumn({
     name: 'updated_at',
-    type: 'datetime',
+    type: 'timestamp',
     comment: '변경일',
   })
   updatedAt: Date;
 
   @DeleteDateColumn({
     name: 'deleted_at',
-    type: 'datetime',
+    type: 'timestamp',
   })
   deletedAt?: Date;
 

@@ -51,27 +51,27 @@ export class PlanEntity {
   })
   visibility: PlanVisibilityTypes;
 
-  @Column({name: "is_allday", type: "tinyint", width: 1, default: 0})
+  @Column({name: "is_allday", type: "smallint", default: 0})
   isAllday: number;
 
-  @Column({name: "is_repeated", type: "tinyint", width: 1, default: 0})
+  @Column({name: "is_repeated", type: "smallint", default: 0})
   isRepeated: number;
 
   @Column({
     name: "started_at",
-    type: "datetime",
+    type: "timestamp",
     nullable: true,
     comment: '시작일: "종일"일 경우 날짜까지만 가져올 예정',
   })
   startedAt: string;
 
-  @Column({name: "ended_at", type: "datetime", nullable: true})
+  @Column({name: "ended_at", type: "timestamp", nullable: true})
   endedAt: string;
 
-  @CreateDateColumn({name: "created_at", type: "datetime"})
+  @CreateDateColumn({name: "created_at", type: "timestamp"})
   createdAt: Date;
 
-  @UpdateDateColumn({name: "updated_at", type: "datetime"})
+  @UpdateDateColumn({name: "updated_at", type: "timestamp"})
   updatedAt: Date;
 
   @OneToOne(() => ScheduleEntity, (schedule) => schedule.plan)

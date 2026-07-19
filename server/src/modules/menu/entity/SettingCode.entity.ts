@@ -50,7 +50,7 @@ export class SettingCodeEntity {
   /** 사용 여부 */
   @Column({
     name: 'is_used',
-    type: 'tinyint',
+    type: 'smallint',
     default: 1,
     nullable: false,
     comment: '사용 여부 (1: true, 0: false)',
@@ -78,11 +78,11 @@ export class SettingCodeEntity {
   updaterId: string | null;
 
   /** 생성일 */
-  @CreateDateColumn({ name: 'created_at', type: 'datetime', comment: '생성일' })
+  @CreateDateColumn({ name: 'created_at', type: 'timestamp', comment: '생성일' })
   createdAt: Date;
 
   /** 변경일 */
-  @UpdateDateColumn({ name: 'updated_at', type: 'datetime', comment: '변경일' })
+  @UpdateDateColumn({ name: 'updated_at', type: 'timestamp', comment: '변경일' })
   updatedAt: Date;
 
   @OneToMany(() => SettingCodeDetailEntity, (detail) => detail.codeGroup)
