@@ -1,8 +1,8 @@
 "use client";
-import styles from "../styles/OrgTreeSelect.module.scss";
+import styles from "../styles/UserDirectorySelect.module.scss";
 import Divider from "../../segment/Divider";
 
-import {EmpType} from "../types/organization.type";
+import {EmpType} from "../types/user-directory.type";
 
 type FilteredResultProps = {
 	grouped: Map<string, EmpType[]>;

@@ -1,6 +1,6 @@
 @use "@/styles/variables.scss" as *;
 
-.orgButton {
+.directoryButton {
 	position: fixed;
 	left: 30px;
 	bottom: 30px;
@@ -18,7 +18,7 @@
 	transition: width 0.2s;
 	display: inline-flex;
 	align-items: center;
-	.orgIcon {
+	.directoryIcon {
 		transform: scale(1.8);
 		text-align: center;
 	}
@@ -27,13 +27,13 @@
 		width: 90px;
 		transition: background-color 0.2s, opacity 0.2s, width 0.5s;
 	}
-	&:hover .orgButtonText {
+	&:hover .directoryButtonText {
 		opacity: 1;
 		width: 70px;
 		transition: opacity 0.2s;
 	}
 }
-.orgButtonText {
+.directoryButtonText {
 	padding-left: 5px;
 	width: 0;
 	opacity: 0;

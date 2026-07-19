@@ -28,7 +28,7 @@ import Modal from "@/components/common/layout/Modal";
 import SortableList from "@/components/common/layout/SortableList";
 import PreviewPoll from "./PreviewPoll";
 import InputBasic from "@/components/common/form-properties/InputBasic";
-import OrgTreeSelect from "@/components/common/company-related/OrgTreeSelect";
+import UserDirectorySelect from "@/components/common/user-directory/UserDirectorySelect";
 import DateTimeRangePicker from "@/components/common/form-properties/DateTimeRangePicker";
 import IconNode from "@/components/common/segment/IconNode";
 
@@ -59,7 +59,7 @@ export default function AddPoll() {
 
 		let val;
 		if (name === "orgSelected") {
-			// OrgTreeSelect에서 이미 문자열로 합쳐진 값을 받음
+			// UserDirectorySelect에서 이미 문자열로 합쳐진 값을 받음
 			const org = value as unknown as {
 				userIds: string[];
 				deptCds: string[];
@@ -351,7 +351,7 @@ export default function AddPoll() {
 			<div className={styles.row}>
 				<div className={styles.iconRow}>
 					<IconNode iconName="user" size={18} color="gray5" />
-					<OrgTreeSelect
+					<UserDirectorySelect
 						onChange={(e: ChangeEvent<HTMLInputElement>) =>
 							onChangePoll?.(e, {
 								pollTempId: poll?.pollTempId,
@@ -366,7 +366,7 @@ export default function AddPoll() {
 							joinUserId: poll?.joinUserId,
 							joinDeptCd: poll?.joinDeptCd,
 						}}
-					></OrgTreeSelect>
+					></UserDirectorySelect>
 				</div>
 			</div>
 			<Divider type="none" />
