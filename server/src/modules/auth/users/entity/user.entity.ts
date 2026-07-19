@@ -54,7 +54,7 @@ export class UserEntity {
   /** 계정 사용 여부 */
   @Column({
     name: "is_used",
-    type: "tinyint",
+    type: "smallint",
     default: 1,
     nullable: false,
     comment: "계정 사용 여부 (1: true, 0: false)",
@@ -64,7 +64,7 @@ export class UserEntity {
   /** 계정 제한 여부 */
   @Column({
     name: "is_restricted",
-    type: "tinyint",
+    type: "smallint",
     default: 0,
     nullable: false,
     comment: "계정 제한 여부 (1: true, 0: false)",
@@ -113,7 +113,7 @@ export class UserEntity {
   /** 이메일 수신 여부 */
   @Column({
     name: "is_email_subscribed",
-    type: "tinyint",
+    type: "smallint",
     default: 1,
     nullable: false,
     comment: "이메일 수신 여부",
@@ -121,14 +121,14 @@ export class UserEntity {
   isEmailSubscribed: number;
 
   /** 생성일 */
-  @CreateDateColumn({name: "created_at", type: "datetime", comment: "생성일"})
+  @CreateDateColumn({name: "created_at", type: "timestamp", comment: "생성일"})
   createdAt: Date;
 
   /** 변경일 */
-  @UpdateDateColumn({name: "updated_at", type: "datetime", comment: "변경일"})
+  @UpdateDateColumn({name: "updated_at", type: "timestamp", comment: "변경일"})
   updatedAt: Date;
 
-  @DeleteDateColumn({name: "deleted_at", type: "datetime", comment: "삭제일"})
+  @DeleteDateColumn({name: "deleted_at", type: "timestamp", comment: "삭제일"})
   deletedAt: Date;
 
   @ManyToOne(() => RoleEntity, (role) => role.users, {

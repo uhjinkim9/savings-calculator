@@ -64,8 +64,7 @@ export class MenuTreeEntity {
   /** 메뉴 사용 여부 */
   @Column({
     name: "is_used",
-    type: "tinyint",
-    width: 1,
+    type: "smallint",
     default: 1,
     nullable: false,
     comment: "메뉴 사용 여부",
@@ -75,8 +74,7 @@ export class MenuTreeEntity {
   /** 메뉴 ID 변경 가능 여부 */
   @Column({
     name: "is_changeable",
-    type: "tinyint",
-    width: 1,
+    type: "smallint",
     default: 1,
     nullable: false,
     comment: "메뉴 ID 변경 가능 여부 (1: 변경 가능, 0: 변경 불가)",
@@ -94,16 +92,16 @@ export class MenuTreeEntity {
   seqNum: number;
 
   /** 생성일 */
-  @CreateDateColumn({name: "created_at", type: "datetime", comment: "생성일"})
+  @CreateDateColumn({name: "created_at", type: "timestamp", comment: "생성일"})
   createdAt: Date;
 
   /** 변경일 */
-  @UpdateDateColumn({name: "updated_at", type: "datetime", comment: "변경일"})
+  @UpdateDateColumn({name: "updated_at", type: "timestamp", comment: "변경일"})
   updatedAt: Date;
 
   @DeleteDateColumn({
     name: "deleted_at",
-    type: "datetime",
+    type: "timestamp",
   })
   deletedAt?: Date;
 

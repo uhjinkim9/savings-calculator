@@ -27,6 +27,6 @@ export class UserAutographEntity {
   imgPath: string | null;
 
   /** 등록일 */
-  @CreateDateColumn({ name: 'created_at', type: 'datetime' })
+  @CreateDateColumn({ name: 'created_at', type: 'timestamp' })
   createdAt: Date;
 }
