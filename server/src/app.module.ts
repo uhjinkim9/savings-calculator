@@ -11,6 +11,7 @@ import {BoardModule} from "src/modules/board/board.module";
 import {FileModule} from "src/modules/file/file.module";
 import {MenuModule} from "src/modules/menu/menu.module";
 import {PlansModule} from "src/modules/plan/plans.module";
+import {SavingsModule} from "src/modules/savings/savings.module";
 import {TaskModule} from "src/modules/task/task.module";
 import {AppController} from "./app.controller";
 
@@ -32,6 +33,7 @@ import {AppController} from "./app.controller";
     FileModule,
     MenuModule,
     PlansModule,
+    SavingsModule,
     TaskModule,
   ],
   controllers: [AppController],
