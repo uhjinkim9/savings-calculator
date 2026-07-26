@@ -38,11 +38,11 @@
     vertical-align: middle;
 
     &:hover {
-      background-color: $gray2;
+      background-color: $primary-gray;
     }
 
     &:checked {
-      background-color: $u-orange;
+      background-color: $primary-green;
       color: white;
     }
   }

@@ -43,13 +43,13 @@
   }
 }
 .gray3 {
-  color: $gray3;
+  color: $primary-gray;
   &.filled {
     background-color: black;
   }
 }
 .gray2 {
-  color: $gray2;
+  color: $primary-gray;
   &.filled {
     background-color: black;
   }
@@ -61,7 +61,7 @@
   }
 }
 .orange {
-  color: $u-orange;
+  color: $primary-green;
   &.filled {
     background-color: black;
   }

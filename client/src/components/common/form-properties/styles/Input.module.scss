@@ -7,77 +7,77 @@
 
 // 공통
 .inputContainer {
-	position: relative;
-	width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .input {
-	font-size: 14px;
-	font-weight: 200;
-	padding: 25px 16px 10px 14px;
-	outline: none;
-	transition: all 0.3s ease-in-out;
-	width: 100%;
-	background: transparent;
-	box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 25px 16px 10px 14px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  background: transparent;
+  box-sizing: border-box;
 }
 
 // Type 1: boxed (박스형)
 .boxed {
-	@extend .input;
-	border: 1px solid $gray4;
-	border-radius: 25px;
+  @extend .input;
+  border: 1px solid $gray4;
+  border-radius: 25px;
 
-	&:focus {
-		border-color: $u-orange;
-	}
+  &:focus {
+    border-color: $primary-green;
+  }
 }
 
 // Type 2: underlined (밑줄형)
 .underlined {
-	@extend .input;
-	border: none;
-	border-bottom: 1px solid black;
-	height: 48px;
+  @extend .input;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 48px;
 
-	&:focus {
-		border-bottom-color: $u-orange;
-	}
+  &:focus {
+    border-bottom-color: $primary-green;
+  }
 }
 
 // placeholder 역할을 하는 label
 .input-label {
-	position: absolute;
-	left: 14px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 14px;
-	font-weight: 100;
-	color: $gray4;
-	transition: all 0.3s ease-in-out;
-	pointer-events: none; // 사용자가 클릭할 수 없게 함
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 100;
+  color: $gray4;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none; // 사용자가 클릭할 수 없게 함
 }
 
 // placeholder가 위로 올라가는 효과
 input:focus + .input-label,
 input:not(:placeholder-shown) + .input-label {
-	top: 3px;
-	font-size: 10px;
-	color: $u-orange;
-	transform: translateY(0);
+  top: 3px;
+  font-size: 10px;
+  color: $primary-green;
+  transform: translateY(0);
 }
 
 // Type 3: smallUnderlined (짧고 얇은 밑줄형, 라벨 없음)
 .smallUnderlined {
-	@extend .input;
-	width: 100%;
-	border: none;
-	border-bottom: 1px solid black;
-	font-size: 14px;
-	padding: 4px 6px;
-	height: 24px;
+  @extend .input;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  padding: 4px 6px;
+  height: 24px;
 
-	&:focus {
-		border-bottom-color: $u-orange;
-	}
+  &:focus {
+    border-bottom-color: $primary-green;
+  }
 }

@@ -2,160 +2,160 @@
 @use "@/styles/common.scss" as *;
 
 .componentContainer {
-	padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .iconRow {
-	display: flex;
-	flex-direction: row;
-	gap: 1.5rem;
-	align-items: end;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: end;
 }
 
 .required {
-	color: $red;
-	margin: 0 5px 0 5px;
+  color: $red;
+  margin: 0 5px 0 5px;
 }
 
 // RespondePoll.tsx, ResultPoll.tsx
 .questionsWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .questionNodes {
-	box-sizing: border-box;
-	border: 0.5px $gray3 solid;
-	background-color: white;
-	margin-bottom: 1rem;
-	padding: 1rem;
+  box-sizing: border-box;
+  border: 0.5px $primary-gray solid;
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .questionOptions {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-	margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .questionContent {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
-	gap: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .selectionsAdded {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	box-sizing: border-box;
-	padding-left: 2rem;
-	width: 100%;
-	gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  box-sizing: border-box;
+  padding-left: 2rem;
+  width: 100%;
+  gap: 0.5rem;
 }
 
 .respSelWrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-	box-sizing: border-box;
-	margin: 9px;
-	gap: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  box-sizing: border-box;
+  margin: 9px;
+  gap: 7px;
 }
 
 .resultSel {
-	display: flex;
-	flex-direction: column;
-	gap: 3px;
-	margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 15px;
 }
 
 // '항목 추가' 버튼
 .selAddBtn {
-	padding: 1rem 0 0.5rem 7%;
+  padding: 1rem 0 0.5rem 7%;
 }
 
 .deleteSel {
-	color: $gray4;
-	scale: 1.2;
-	margin-right: 10px;
-	transition: color 0.2s ease-in-out;
-	cursor: pointer;
+  color: $gray4;
+  scale: 1.2;
+  margin-right: 10px;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
 
-	&:hover {
-		color: black;
-	}
+  &:hover {
+    color: black;
+  }
 }
 
 // DnD 핸들
 .dragHandle {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-	cursor: grab;
-	padding: 0.3rem;
-	font-size: 1.1rem;
-	color: #999;
-	user-select: none;
+  cursor: grab;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  color: #999;
+  user-select: none;
 
-	&:active {
-		cursor: grabbing;
-	}
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .charts {
-	display: flex;
-	flex-direction: row;
-	gap: 35px;
-	margin: 0 20px 20px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  margin: 0 20px 20px 0;
 }
 
 /*************************** PollInfo.tsx ***************************/
 .pollInfo {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12px 0;
 }
 
 .respondents {
-	margin-left: 8px;
-	color: $u-orange;
+  margin-left: 8px;
+  color: $primary-green;
 }
 
 .pollExplanation {
-	padding: 20px 10px;
-	box-sizing: border-box;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
 .isNotRespondent {
-	color: red;
+  color: red;
 }
 
 // PollInfo.tsx 내부 마감 노드
 .finished {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	margin: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
 }
 .finishedWrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 2rem;
-	width: 15rem;
-	height: 10rem;
-	// border: 1px solid $gray4;
-	border-radius: 5px;
-	margin: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 15rem;
+  height: 10rem;
+  // border: 1px solid $gray4;
+  border-radius: 5px;
+  margin: 3rem 0 3rem 0;
 }

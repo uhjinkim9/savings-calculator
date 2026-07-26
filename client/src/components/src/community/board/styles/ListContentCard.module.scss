@@ -8,7 +8,7 @@
 
   &.notice {
     .title {
-      color: $u-orange;
+      color: $primary-green;
     }
   }
 }
@@ -111,14 +111,14 @@
 
   .statusOrange {
     @extend .prefixMark;
-    background-color: $u-orange;
+    background-color: $primary-green;
     margin-right: 6px;
   }
 
   // 공지 (유지 - 다른 용도로 사용)
   .notice {
     @extend .prefixMark;
-    background-color: $u-orange;
+    background-color: $primary-green;
     margin-right: 6px;
     display: flex;
     flex-direction: row;

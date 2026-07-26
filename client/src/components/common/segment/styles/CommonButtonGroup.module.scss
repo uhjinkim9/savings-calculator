@@ -1,57 +1,57 @@
 @use "@/styles/variables.scss" as *;
 
 .wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: end;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
 }
 
 .buttonGroup {
-	display: flex;
-	flex-direction: row;
-	justify-content: end;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
 }
 
 .buttonWrapper {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background: white;
-	cursor: pointer;
-	border: transparent;
-	gap: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  cursor: pointer;
+  border: transparent;
+  gap: 6px;
 
-	span {
-		font-size: 0.8rem;
-		font-weight: 400;
-		color: $gray5;
-	}
+  span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $gray5;
+  }
 
-	&:hover {
-		.iconWrapper {
-			background: $u-navy;
-			color: white;
-			transition: all 0.3s ease-in-out;
-		}
-	}
+  &:hover {
+    .iconWrapper {
+      background: $black;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
 
 .iconWrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	height: 22px;
-	width: 22px;
-	border-radius: 50%;
-	border: 1px solid $u-navy;
-	color: $u-navy;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 1px solid $black;
+  color: $black;
 
-	.icon {
-		font-size: 14px;
-		text-align: center;
-	}
+  .icon {
+    font-size: 14px;
+    text-align: center;
+  }
 }

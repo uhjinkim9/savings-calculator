@@ -1,45 +1,44 @@
 @use "@/styles/variables.scss" as *;
 
 .tooltipWrapper {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 
-	.tooltipText {
-		visibility: hidden;
-		width: 7rem;
-		background-color: #fff;
-		border: 1px solid rgba($u-orange, 0.75);
+  .tooltipText {
+    visibility: hidden;
+    width: 7rem;
+    background-color: #fff;
+    border: 1px solid rgba($primary-green, 0.75);
 
-		text-align: center;
-		border-radius: 4px;
-		padding: 6px 8px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 8px;
 
-		position: absolute;
-		z-index: 5;
-		top: calc(100% + 5px); // 요소 아래쪽에 표시
-		left: 50%;
-		transform: translateX(-50%);
-		opacity: 0;
-		transition: 0.3s;
-		pointer-events: none;
-		font-size: 0.75rem;
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 5px); // 요소 아래쪽에 표시
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    font-size: 0.75rem;
 
-		&::before {
-			content: "";
-			position: absolute;
-			bottom: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			border-width: 6px;
-			border-style: solid;
-			border-color: transparent transparent rgba($u-orange, 0.75)
-				transparent;
-		}
-	}
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent transparent rgba($primary-green, 0.75) transparent;
+    }
+  }
 
-	.tooltipText.isActive {
-		visibility: visible;
-		opacity: 1;
-		pointer-events: auto;
-	}
+  .tooltipText.isActive {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
 }

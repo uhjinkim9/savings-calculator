@@ -1,78 +1,78 @@
 @use "@/styles/variables.scss" as *;
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 2vh;
-	margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  margin-top: 1vh;
 }
 
 // 프로필 사진과 사원 정보 사이
 .above {
-	display: flex;
-	flex-direction: row;
-	gap: 5vw;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
 }
 
 // 사원 정보
 
 .infoWrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 
-	.info {
-		display: flex;
-		flex-direction: column;
+  .info {
+    display: flex;
+    flex-direction: column;
 
-		.nameWrapper {
-			display: flex;
-			flex-direction: row;
+    .nameWrapper {
+      display: flex;
+      flex-direction: row;
 
-			.name {
-				font-weight: 600;
-				font-size: 1.4rem;
-				border-bottom: 1px solid $u-orange;
-				width: 100%;
-			}
-			.starIcon {
-				vertical-align: middle;
-				font-size: 1.4rem;
-			}
-		}
+      .name {
+        font-weight: 600;
+        font-size: 1.4rem;
+        border-bottom: 1px solid $primary-green;
+        width: 100%;
+      }
+      .starIcon {
+        vertical-align: middle;
+        font-size: 1.4rem;
+      }
+    }
 
-		.duty {
-			font-weight: 600;
-			font-size: 1rem;
-		}
-		.dept {
-			font-weight: 400;
-			font-size: 0.8rem;
-		}
-	}
+    .duty {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .dept {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
 
-	.contact {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-		span {
-			vertical-align: middle;
-		}
-	}
+    span {
+      vertical-align: middle;
+    }
+  }
 }
 
 .status {
-	display: flex;
-	flex-direction: row;
-	border-radius: 30px;
-	border: 1px solid $gray5;
-	padding: 2px 30px;
-	width: 21vw;
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+  border: 1px solid $gray5;
+  padding: 2px 30px;
+  width: 21vw;
 
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }

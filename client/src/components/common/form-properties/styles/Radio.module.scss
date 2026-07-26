@@ -5,86 +5,86 @@
  *********************************/
 
 .radio {
-	display: flex;
-	flex-shrink: 0;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	font-weight: 400;
-	// min-width: 90px;
-	position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 400;
+  // min-width: 90px;
+  position: relative;
 }
 
 /* 기본 라디오 숨기기 */
 .input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-	width: 0;
-	height: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
 }
 
 /* 커스텀 라디오 */
 .checkmark {
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid $gray5;
-	background-color: white;
-	transition: all 0.3s ease;
-	position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $gray5;
+  background-color: white;
+  transition: all 0.3s ease;
+  position: relative;
 
-	&::after {
-		content: "";
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background: white;
-		opacity: 0; // 처음에는 숨김
-		transition: opacity 0.3s ease;
-	}
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0; // 처음에는 숨김
+    transition: opacity 0.3s ease;
+  }
 }
 
 .label {
-	margin-left: 8px;
-	color: $gray5;
-	font-size: 0.8rem;
-	font-weight: 300;
+  margin-left: 8px;
+  color: $gray5;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 /* ===== 타입별 스타일 ===== */
 
 .orange {
-	.checkmark {
-		border-color: $gray5;
-	}
+  .checkmark {
+    border-color: $gray5;
+  }
 
-	.input:checked + .checkmark {
-		background-color: $u-orange;
-		border-color: $u-orange;
+  .input:checked + .checkmark {
+    background-color: $primary-green;
+    border-color: $primary-green;
 
-		&::after {
-			opacity: 1; // 체크되면 흰 점 표시
-		}
-	}
+    &::after {
+      opacity: 1; // 체크되면 흰 점 표시
+    }
+  }
 }
 
 .gray {
-	.checkmark {
-		border-color: $gray4;
-		background-color: white;
-	}
+  .checkmark {
+    border-color: $gray4;
+    background-color: white;
+  }
 
-	.input:checked + .checkmark {
-		background-color: $gray4;
-		border-color: $gray4;
+  .input:checked + .checkmark {
+    background-color: $gray4;
+    border-color: $gray4;
 
-		&::after {
-			opacity: 1; // 체크되면 흰 점 표시
-		}
-	}
+    &::after {
+      opacity: 1; // 체크되면 흰 점 표시
+    }
+  }
 }

@@ -1,61 +1,61 @@
 @use "@/styles/variables.scss" as *;
 
 .pagination {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	margin: 0.5rem 0;
-	box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
 
-	button {
-		border: transparent;
-		background: transparent;
-		cursor: pointer;
-	}
+  button {
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+  }
 }
 
 .list {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	list-style-type: none;
-	gap: 0.3rem;
-	padding: 0 20px; /* 기본 패딩 제거 */
-	margin: 0; /* 기본 마진 제거 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 0.3rem;
+  padding: 0 20px; /* 기본 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
 
-	li {
-		display: flex;
-		cursor: pointer;
-		font-size: 0.8rem;
-		color: $gray4;
-		padding: 8px 12px;
-		border-radius: 4px;
-		transition: all 0.2s ease;
+  li {
+    display: flex;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: $gray4;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 
-		// &:hover {
-		// 	background-color: rgba(255, 140, 0, 0.1);
-		// 	color: $u-orange;
-		// }
+    // &:hover {
+    // 	background-color: rgba(255, 140, 0, 0.1);
+    // 	color: $primary-green;
+    // }
 
-		&.active {
-			color: $u-orange;
-			background-color: white;
-			border-color: $u-orange;
-			font-weight: 700;
-		}
-	}
+    &.active {
+      color: $primary-green;
+      background-color: white;
+      border-color: $primary-green;
+      font-weight: 700;
+    }
+  }
 
-	button {
-		display: flex;
-		border: transparent;
-		background: transparent;
-		cursor: pointer;
-		color: $gray4;
-		font-weight: 500;
-	}
+  button {
+    display: flex;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    color: $gray4;
+    font-weight: 500;
+  }
 }
 
 .icon {
-	color: $gray5;
+  color: $gray5;
 }

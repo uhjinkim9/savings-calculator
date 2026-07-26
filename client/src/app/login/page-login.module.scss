@@ -1,71 +1,71 @@
 @use "@/styles/variables.scss" as *;
 
 .page {
-	display: grid;
-	grid-template-rows: 20px 1fr 20px;
-	align-items: center;
-	justify-items: center;
-	min-height: 100svh;
-	gap: 64px;
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  gap: 64px;
 }
 
 .main {
-	display: flex;
-	flex-direction: column; /* 세로로 쌓이는 속성 */
-	align-items: center;
-	flex-wrap: wrap; /* 필요할 때 줄바꿈 허용, 자동 줄바꿈 */
-	grid-row-start: 2;
-	gap: 20px;
+  display: flex;
+  flex-direction: column; /* 세로로 쌓이는 속성 */
+  align-items: center;
+  flex-wrap: wrap; /* 필요할 때 줄바꿈 허용, 자동 줄바꿈 */
+  grid-row-start: 2;
+  gap: 20px;
 }
 
 // Welcome
 .title {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .welcome {
-	font-size: 16px;
-	font-weight: 200;
+  font-size: 16px;
+  font-weight: 200;
 }
 
 .line {
-	width: 83px;
-	height: 1px;
-	background-color: $u-orange;
-	border: none;
+  width: 83px;
+  height: 1px;
+  background-color: $primary-green;
+  border: none;
 }
 
 // 로그인 보조 액션
 .subsidiary {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	gap: 25px;
-	width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
 }
 
 .login-button {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
-	.page {
-		padding: 32px;
-		padding-bottom: 80px;
-	}
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
 
-	.main {
-		align-items: center;
-	}
+  .main {
+    align-items: center;
+  }
 
-	.main ol {
-		text-align: center;
-	}
+  .main ol {
+    text-align: center;
+  }
 }

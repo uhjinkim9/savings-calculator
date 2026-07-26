@@ -39,7 +39,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
   // border-bottom: 1px solid #d9d9d9;
   border-bottom-left-radius: 8px;
@@ -107,15 +109,17 @@
   width: 18vw;
   height: 100%;
   padding: 0.2rem 0.8rem 0.8rem;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
   box-sizing: border-box;
-  // border-bottom: dashed 3px $gray2;
+  // border-bottom: dashed 3px $primary-gray;
 }
 /* 대분류 또는 중분류에 호버하면 카테고리 배경 변경 */
 // .mainMenu.active .categoryArea,
 // .mainMenu:hover .categoryArea,
 .subMenu:hover ~ .categoryArea {
-  background: $u-orange;
+  background: $primary-green;
   color: white;
   height: 100%;
 }
@@ -127,7 +131,9 @@
   max-height: 0;
   opacity: 0;
   transform: translateY(-10px);
-  transition: max-height 0.3s cubic-bezier(0.6, 0, 0.8, 1), opacity 0.3s,
+  transition:
+    max-height 0.3s cubic-bezier(0.6, 0, 0.8, 1),
+    opacity 0.3s,
     transform 0.3s;
   overflow: hidden;
 }
@@ -143,7 +149,9 @@
   font-size: 15px;
   opacity: 0.9;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
     font-weight 0.3s ease-in-out;
 
   &:hover {
@@ -152,7 +160,7 @@
   }
 
   &.active {
-    background: $u-orange;
+    background: $primary-green;
     color: white;
     font-weight: 700;
     opacity: 1;

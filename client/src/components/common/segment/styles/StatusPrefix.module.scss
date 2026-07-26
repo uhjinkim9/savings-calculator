@@ -2,62 +2,62 @@
 @use "@/styles/common" as *;
 
 .container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 // 기본 prefix 스타일
 .prefixMark {
-	padding: 3px 12px;
-	font-size: 0.8rem;
-	border-radius: 10px;
-	color: white;
-	font-weight: 500;
-	white-space: nowrap;
-	margin-right: 5px;
+  padding: 3px 12px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 5px;
 }
 
 // 색상별 status 스타일
 .statusRed {
-	@extend .prefixMark;
-	background-color: $red;
+  @extend .prefixMark;
+  background-color: $red;
 }
 
 .statusBlue {
-	@extend .prefixMark;
-	background-color: $blue;
+  @extend .prefixMark;
+  background-color: $blue;
 }
 
 .statusGray {
-	@extend .prefixMark;
-	background-color: $gray5;
+  @extend .prefixMark;
+  background-color: $gray5;
 }
 
 .statusGreen {
-	@extend .prefixMark;
-	background-color: $green;
+  @extend .prefixMark;
+  background-color: $green;
 }
 
 .statusOrange {
-	@extend .prefixMark;
-	background-color: $u-orange;
+  @extend .prefixMark;
+  background-color: $primary-green;
 }
 
 .statusYellow {
-	@extend .prefixMark;
-	background-color: $yellow;
-	color: black;
+  @extend .prefixMark;
+  background-color: $yellow;
+  color: black;
 }
 
 // 투명 배경 - ImageIconImage와 같이 사용할 목적으로 만들어짐
 .statusTransparent {
-	background-color: $transparent;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding: 1px;
-	margin-right: 5px;
+  background-color: $transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  margin-right: 5px;
 }

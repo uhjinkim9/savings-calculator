@@ -13,15 +13,15 @@
 // 그룹 행 스타일
 .groupRow {
   cursor: pointer;
-  
+
   &:hover {
-    background-color: rgba($u-orange, 0.05);
+    background-color: rgba($primary-green, 0.05);
   }
 }
 
 .selectedRow {
-  background-color: rgba($u-orange, 0.1);
-  border-left: 3px solid $u-orange;
+  background-color: rgba($primary-green, 0.1);
+  border-left: 3px solid $primary-green;
 }
 
 .selectedGroupInfo {
@@ -105,20 +105,20 @@
 
   // 선택된 항목 스타일
   &.selected {
-    background-color: rgba($u-orange, 0.1);
-    border-left-color: $u-orange; // 투명한 보더의 색상만 변경
+    background-color: rgba($primary-green, 0.1);
+    border-left-color: $primary-green; // 투명한 보더의 색상만 변경
   }
 
   // 호버 효과
   &:hover:not(.headerRow) {
-    background-color: rgba($u-orange, 0.1);
+    background-color: rgba($primary-green, 0.1);
   }
 }
 
 .headerRow {
   background-color: $gray1;
   padding: 0.75rem 0.1rem;
-  border-bottom: 1px solid $gray2;
+  border-bottom: 1px solid $primary-gray;
 
   .check,
   .groupNm,

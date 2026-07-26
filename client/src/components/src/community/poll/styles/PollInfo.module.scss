@@ -2,54 +2,54 @@
 @use "@/styles/common.scss" as *;
 
 .pollSetting {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12px 0;
 }
 
 .date,
 .targets {
-	display: flex;
-	font-size: 14px;
-	vertical-align: middle;
+  display: flex;
+  font-size: 14px;
+  vertical-align: middle;
 }
 
 .targets {
-	margin-left: 15px;
+  margin-left: 15px;
 }
 
 .respondents {
-	margin-left: 8px;
-	color: $u-orange;
+  margin-left: 8px;
+  color: $primary-green;
 }
 
 .pollExplanation {
-	padding: 20px 10px;
-	box-sizing: border-box;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
 .isNotRespondent {
-	color: red;
+  color: red;
 }
 
 // PollInfo.tsx 내부 마감 노드
 .finished {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	margin: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
 }
 .finishedWrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 2rem;
-	width: 15rem;
-	height: 10rem;
-	// border: 1px solid $gray4;
-	border-radius: 5px;
-	margin: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 15rem;
+  height: 10rem;
+  // border: 1px solid $gray4;
+  border-radius: 5px;
+  margin: 3rem 0 3rem 0;
 }

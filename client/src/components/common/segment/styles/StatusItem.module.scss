@@ -2,66 +2,66 @@
 @use "@/styles/common.scss" as *;
 
 .item {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	padding: 20px 10px;
-	width: 100%;
-	&:not(:last-child) {
-		border-bottom: 1px dotted #d9d9d9;
-	}
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  width: 100%;
+  &:not(:last-child) {
+    border-bottom: 1px dotted #d9d9d9;
+  }
 }
 .statusCommon {
-	width: 3.5rem;
-	height: 3.5rem;
-	border-radius: 50%;
-	font-size: 1.1rem;
-	font-weight: 600;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
 }
 .status {
-	@extend .statusCommon;
-	border: 2px solid #a1a1a1;
-	&:hover {
-		color: $u-orange;
-		border-color: $u-orange;
-	}
+  @extend .statusCommon;
+  border: 2px solid #a1a1a1;
+  &:hover {
+    color: $primary-green;
+    border-color: $primary-green;
+  }
 }
 .statusDark {
-	@extend .statusCommon;
-	border: 2px solid #000927;
-	background-color: #000927;
-	color: #ffffff;
+  @extend .statusCommon;
+  border: 2px solid #000927;
+  background-color: #000927;
+  color: #ffffff;
 }
 .infoWrap {
-	flex: 1;
+  flex: 1;
 }
 .info {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	padding-bottom: 0.5rem;
-	margin-bottom: 0.5rem;
-	border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.5);
 }
 
 .name {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .date {
-	font-size: 0.8rem;
-	color: #717171;
+  font-size: 0.8rem;
+  color: #717171;
 }
 
 .urgentIcon {
-	color: $red;
-	font-size: 1.3rem;
-	vertical-align: middle;
-	margin-right: 0.5rem;
+  color: $red;
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 // 태블릿 세로 (601px ~ 1024px)
@@ -70,16 +70,16 @@
 
 // 모바일 (600px 이하)
 @media (width <= 600px) {
-	.statusCommon {
-		width: 50px;
-		height: 50px;
-		font-size: 1rem;
-	}
-	.subject {
-		//말 줄임표 표시
-		max-width: 150px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
+  .statusCommon {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  .subject {
+    //말 줄임표 표시
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

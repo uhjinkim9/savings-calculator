@@ -2,130 +2,130 @@
 @use "@/styles/common" as *;
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-	&.notice {
-		.title {
-			color: $u-orange;
-		}
-	}
+  &.notice {
+    .title {
+      color: $primary-green;
+    }
+  }
 }
 
 .creator {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
-	gap: 0.5rem;
-	margin: 0.2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.2rem 0;
 }
 
 .row {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
 }
 
 .col {
-	display: flex;
-	flex-direction: column;
-	gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .name {
-	font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .smallInfo {
-	font-weight: 300;
-	font-size: 0.8rem;
-	color: $gray5;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: $gray5;
 }
 
 .prefixMark {
-	padding: 3px 12px;
-	font-size: 0.8rem;
-	text-align: center;
-	border-radius: 5px;
-	color: white;
+  padding: 3px 12px;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
 }
 
 .status {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
-	gap: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 3px;
 
-	// 새로운 색상별 스타일 클래스들
-	.statusRed {
-		@extend .prefixMark;
-		background-color: $red;
-		margin-right: 6px;
-	}
+  // 새로운 색상별 스타일 클래스들
+  .statusRed {
+    @extend .prefixMark;
+    background-color: $red;
+    margin-right: 6px;
+  }
 
-	.statusBlue {
-		@extend .prefixMark;
-		background-color: $blue;
-		margin-right: 6px;
-	}
+  .statusBlue {
+    @extend .prefixMark;
+    background-color: $blue;
+    margin-right: 6px;
+  }
 
-	.statusGray {
-		@extend .prefixMark;
-		background-color: $gray5;
-		margin-right: 6px;
-	}
+  .statusGray {
+    @extend .prefixMark;
+    background-color: $gray5;
+    margin-right: 6px;
+  }
 
-	.statusGreen {
-		@extend .prefixMark;
-		background-color: $green;
-		margin-right: 6px;
-	}
+  .statusGreen {
+    @extend .prefixMark;
+    background-color: $green;
+    margin-right: 6px;
+  }
 
-	.statusOrange {
-		@extend .prefixMark;
-		background-color: $u-orange;
-		margin-right: 6px;
-	}
+  .statusOrange {
+    @extend .prefixMark;
+    background-color: $primary-green;
+    margin-right: 6px;
+  }
 
-	// 공지 (유지 - 다른 용도로 사용)
-	.notice {
-		@extend .prefixMark;
-		background-color: $u-orange;
-		margin-right: 6px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+  // 공지 (유지 - 다른 용도로 사용)
+  .notice {
+    @extend .prefixMark;
+    background-color: $primary-green;
+    margin-right: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-		.icon {
-			vertical-align: middle;
-			font-size: 0.9rem;
-			color: white;
-		}
-	}
+    .icon {
+      vertical-align: middle;
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
 }
 
 .title {
-	font-weight: 500;
-	font-size: 1rem;
-	color: black;
-	cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
 }
 
 // 글 길어지면 말줄임표
 .explanation {
-	font-weight: 300;
-	font-size: 0.8rem;
-	color: $gray5;
-	vertical-align: middle;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: $gray5;
+  vertical-align: middle;
 
-	display: -webkit-box;
-	-webkit-line-clamp: 1; // 최대 1줄까지 보이기
-	line-clamp: 1; // 표준 속성 추가
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; // 최대 1줄까지 보이기
+  line-clamp: 1; // 표준 속성 추가
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -3,72 +3,75 @@
 $dotGap: 60px;
 
 .wrapper {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 0;
-	gap: $dotGap;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: $dotGap;
 
-	// 전체 회색 선
-	&::before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: $gray4;
-		transform: translateY(-1000%);
-		z-index: 0;
-	}
+  // 전체 회색 선
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $gray4;
+    transform: translateY(-1000%);
+    z-index: 0;
+  }
 
-	// 선택된 점수까지 주황색 선
-	&::after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 0;
-		height: 1px;
-		background-color: $u-orange;
-		transform: translateY(-1000%);
-		z-index: 1;
-		width: var(--score-ratio, 0%);
-		transition: width 0.3s ease;
-	}
+  // 선택된 점수까지 주황색 선
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    background-color: $primary-green;
+    transform: translateY(-1000%);
+    z-index: 1;
+    width: var(--score-ratio, 0%);
+    transition: width 0.3s ease;
+  }
 }
 
 .radio {
-	position: relative;
-	z-index: 2;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	cursor: pointer;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 
-	input {
-		display: none;
-	}
+  input {
+    display: none;
+  }
 
-	.dot {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		background-color: white;
-		border: 1px solid $gray4;
-		transition: background-color 0.3s ease, border-color 0.3s ease,
-			scale 0.3s ease, box-shadow 0.3s ease;
-	}
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid $gray4;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      scale 0.3s ease,
+      box-shadow 0.3s ease;
+  }
 
-	&.active .dot {
-		scale: 1.1;
-		background-color: $u-orange;
-		border: 1px solid $u-orange;
-	}
+  &.active .dot {
+    scale: 1.1;
+    background-color: $primary-green;
+    border: 1px solid $primary-green;
+  }
 
-	.label {
-		margin-top: 4px;
-		font-size: 0.75rem;
-		color: $gray5;
-	}
+  .label {
+    margin-top: 4px;
+    font-size: 0.75rem;
+    color: $gray5;
+  }
 }

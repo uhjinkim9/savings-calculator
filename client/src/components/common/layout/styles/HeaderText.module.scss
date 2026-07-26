@@ -1,32 +1,32 @@
 @use "@/styles/variables.scss" as *;
 
 .title {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
 }
 
 .h1 {
-	font-size: 32px;
-	letter-spacing: 4px;
+  font-size: 32px;
+  letter-spacing: 4px;
 }
 
 .colorOrange {
-	@extend .h1;
-	color: $u-orange;
-	font-weight: 800;
+  @extend .h1;
+  color: $primary-green;
+  font-weight: 800;
 }
 
 .colorNavy {
-	@extend .h1;
-	color: $u-navy;
-	font-weight: 200;
+  @extend .h1;
+  color: $black;
+  font-weight: 200;
 }
 
 /* 반응형 */
 @media (max-width: 600) {
-	.title {
-		display: none;
-	}
+  .title {
+    display: none;
+  }
 }

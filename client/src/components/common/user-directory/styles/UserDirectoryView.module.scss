@@ -1,53 +1,56 @@
 @use "@/styles/variables.scss" as *;
 
 .directoryButton {
-	position: fixed;
-	left: 30px;
-	bottom: 30px;
-	height: 50px;
-	width: 50px;
-	z-index: 9999; // 헤더나 다른 컴포넌트보다 위에
-	background-color: $u-orange;
-	color: white;
-	padding: 10px 19px;
-	border: none;
-	border-radius: 50px;
-	cursor: pointer;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-	text-align: left;
-	transition: width 0.2s;
-	display: inline-flex;
-	align-items: center;
-	.directoryIcon {
-		transform: scale(1.8);
-		text-align: center;
-	}
-	&:hover {
-		// opacity: 0.6;
-		width: 90px;
-		transition: background-color 0.2s, opacity 0.2s, width 0.5s;
-	}
-	&:hover .directoryButtonText {
-		opacity: 1;
-		width: 70px;
-		transition: opacity 0.2s;
-	}
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  z-index: 9999; // 헤더나 다른 컴포넌트보다 위에
+  background-color: $primary-green;
+  color: white;
+  padding: 10px 19px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: width 0.2s;
+  display: inline-flex;
+  align-items: center;
+  .directoryIcon {
+    transform: scale(1.8);
+    text-align: center;
+  }
+  &:hover {
+    // opacity: 0.6;
+    width: 90px;
+    transition:
+      background-color 0.2s,
+      opacity 0.2s,
+      width 0.5s;
+  }
+  &:hover .directoryButtonText {
+    opacity: 1;
+    width: 70px;
+    transition: opacity 0.2s;
+  }
 }
 .directoryButtonText {
-	padding-left: 5px;
-	width: 0;
-	opacity: 0;
-	white-space: nowrap;
-	margin-left: 0.2rem;
+  padding-left: 5px;
+  width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  margin-left: 0.2rem;
 }
 
 .inputEmp {
-	font-size: 0.85rem;
-	font-weight: 300;
-	color: $gray5;
-	width: 100px;
-	background: transparent;
-	box-sizing: border-box;
-	border: transparent;
-	border-bottom: 1px solid $gray4;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: $gray5;
+  width: 100px;
+  background: transparent;
+  box-sizing: border-box;
+  border: transparent;
+  border-bottom: 1px solid $gray4;
 }

@@ -18,7 +18,7 @@
   padding: 1.1rem;
   border-radius: 12px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.03);
-  border: 1px solid $gray3;
+  border: 1px solid $primary-gray;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -95,7 +95,7 @@
 .active {
   background: white;
   font-weight: bold;
-  border: 1px solid $u-orange;
+  border: 1px solid $primary-green;
   box-sizing: border-box;
   width: 100%;
 }
@@ -108,7 +108,7 @@
   font-size: 12px;
   font-weight: 500;
   color: white;
-  background: $u-orange;
+  background: $primary-green;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -211,7 +211,7 @@
   transition: color 0.2s ease;
 
   &:hover {
-    color: $u-orange;
+    color: $primary-green;
   }
 }
 
@@ -233,7 +233,7 @@
   font-weight: inherit;
   color: inherit;
   outline: none;
-  border-bottom: 1px solid $u-orange;
+  border-bottom: 1px solid $primary-green;
   padding: 2px 4px;
   margin: 0;
   width: 100%;
@@ -242,12 +242,12 @@
   border: transparent;
   width: 50%;
   text-align: center;
-  border-bottom: 1px solid $gray3;
+  border-bottom: 1px solid $primary-gray;
   font-size: 0.9rem;
 
   &:focus {
     outline: none;
-    border-bottom: 1px solid $u-orange;
+    border-bottom: 1px solid $primary-green;
     transition: border-bottom 0.2s ease-in-out;
   }
 }

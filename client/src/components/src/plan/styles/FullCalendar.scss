@@ -1,95 +1,95 @@
 @use "@/styles/variables.scss" as *;
 
 :root {
-	--fc-highlight-color: transparent;
-	--fc-small-font-size: 0.8rem;
-	--fc-button-text-color: #717171;
-	--fc-button-bg-color: #fff;
-	--fc-button-hover-bg-color: transparent;
-	--fc-button-active-bg-color: #eaeaea;
-	--fc-button-border-color: #d9d9d9;
-	--fc-button-hover-border-color: #d9d9d9;
-	--fc-button-active-border-color: transparent;
+  --fc-highlight-color: transparent;
+  --fc-small-font-size: 0.8rem;
+  --fc-button-text-color: #717171;
+  --fc-button-bg-color: #fff;
+  --fc-button-hover-bg-color: transparent;
+  --fc-button-active-bg-color: #eaeaea;
+  --fc-button-border-color: #d9d9d9;
+  --fc-button-hover-border-color: #d9d9d9;
+  --fc-button-active-border-color: transparent;
 }
 
 .fc {
-	& .fc-button:focus {
-		outline: 0 !important;
-		box-shadow: none !important;
-	}
+  & .fc-button:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
 
-	& .fc-button-group {
-		position: relative;
-		display: inline-flex;
-		vertical-align: middle;
-		width: 150px;
-		height: 30px;
-	}
+  & .fc-button-group {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    width: 150px;
+    height: 30px;
+  }
 
-	& .fc-button {
-		font-size: 0.8rem;
-	}
+  & .fc-button {
+    font-size: 0.8rem;
+  }
 
-	& .fc-toolbar-title {
-		font-size: 1.3rem;
-	}
+  & .fc-toolbar-title {
+    font-size: 1.3rem;
+  }
 
-	& .fc-toolbar-chunk:nth-child(2) {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		gap: 12px;
-		margin-right: 110px;
+  & .fc-toolbar-chunk:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-right: 110px;
 
-		.fc-button-primary {
-			border: none;
-		}
-	}
+    .fc-button-primary {
+      border: none;
+    }
+  }
 
-	& table {
-		font-size: 0.8rem;
-	}
+  & table {
+    font-size: 0.8rem;
+  }
 }
 
 // 월 캘린더 칸 높이
 .fc-daygrid-day-frame {
-	height: 100%; // 필수
-	overflow: hidden;
+  height: 100%; // 필수
+  overflow: hidden;
 }
 
 .fc-daygrid-day-events {
-	max-height: 3.5em; // 칸 높이 고정
-	position: relative;
+  max-height: 3.5em; // 칸 높이 고정
+  position: relative;
 }
 
 .fc-more-link {
-	font-size: 0.75rem;
-	color: $u-orange;
-	cursor: pointer;
+  font-size: 0.75rem;
+  color: $primary-green;
+  cursor: pointer;
 }
 
 // 이벤트 블럭 제목
 .fc-event-custom-content {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 4px; // 시간과 제목 사이 간격
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px; // 시간과 제목 사이 간격
 }
 
 .fc-day-sat {
-	.fc-col-header-cell-cushion {
-		color: $blue;
-	}
-	.fc-daygrid-day-number {
-		color: $blue;
-	}
+  .fc-col-header-cell-cushion {
+    color: $blue;
+  }
+  .fc-daygrid-day-number {
+    color: $blue;
+  }
 }
 .fc-day-sun {
-	.fc-col-header-cell-cushion {
-		color: $red;
-	}
-	.fc-daygrid-day-number {
-		color: $red;
-	}
+  .fc-col-header-cell-cushion {
+    color: $red;
+  }
+  .fc-daygrid-day-number {
+    color: $red;
+  }
 }

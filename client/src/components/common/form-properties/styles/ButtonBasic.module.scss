@@ -10,7 +10,7 @@
   background-color: white;
   border-radius: 25px;
   border-color: transparent;
-  border: 1px solid $u-orange;
+  border: 1px solid $primary-green;
   text-decoration: none;
   min-width: 5px;
   transition: all 0.3s;
@@ -21,7 +21,7 @@
     outline: none;
   }
   &:hover {
-    color: $u-orange;
+    color: $primary-green;
   }
   &:hover.onHoverOpaque {
     opacity: 0.6;
@@ -31,11 +31,11 @@
     opacity: 0.5;
     cursor: not-allowed;
     color: $gray4;
-    border-color: $gray3;
+    border-color: $primary-gray;
 
     &:hover {
       color: $gray4;
-      border-color: $gray3;
+      border-color: $primary-gray;
     }
   }
 }
@@ -61,8 +61,8 @@
     outline: none;
   }
   &:hover {
-    color: $u-orange;
-    border-color: $u-orange;
+    color: $primary-green;
+    border-color: $primary-green;
   }
   &:hover.onHoverOpaque {
     opacity: 0.6;
@@ -76,11 +76,11 @@
     opacity: 0.5;
     cursor: not-allowed;
     color: $gray4;
-    border-color: $gray3;
+    border-color: $primary-gray;
 
     &:hover {
       color: $gray4;
-      border-color: $gray3;
+      border-color: $primary-gray;
     }
   }
 }

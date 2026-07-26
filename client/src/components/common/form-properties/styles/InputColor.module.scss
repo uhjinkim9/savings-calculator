@@ -2,28 +2,28 @@
 
 // 공통
 .wrapper {
-	position: relative;
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	cursor: pointer;
-	margin-left: 10px;
-	flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  flex-shrink: 0;
 
-	.hiddenInput {
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		width: 0;
-		height: 0;
-		pointer-events: none;
-	}
+  .hiddenInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
 }
 
 .circle {
-	&:hover {
-		border-color: $u-orange;
-		opacity: 0.6;
-	}
+  &:hover {
+    border-color: $primary-green;
+    opacity: 0.6;
+  }
 }

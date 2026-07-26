@@ -2,66 +2,66 @@
 @use "@/styles/common" as *;
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 
-	&.notice {
-		.title {
-			color: $u-orange;
-		}
-	}
+  &.notice {
+    .title {
+      color: $primary-green;
+    }
+  }
 }
 
 .creator {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
-	gap: 0.5rem;
-	margin: 0.2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.2rem 0;
 }
 
 .name {
-	font-size: 0.85rem;
+  font-size: 0.85rem;
 }
 
 .smallInfo {
-	font-weight: 300;
-	font-size: 0.8rem;
-	color: $gray5;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: $gray5;
 }
 
 .status {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 
-	.notice {
-		padding: 3px 12px;
-		font-size: 0.8rem;
-		text-align: center;
-		border-radius: 5px;
-		color: white;
+  .notice {
+    padding: 3px 12px;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
 
-		background-color: $u-orange;
-		margin-right: 6px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+    background-color: $primary-green;
+    margin-right: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-		.icon {
-			vertical-align: middle;
-			font-size: 0.9rem;
-			color: white;
-		}
-	}
+    .icon {
+      vertical-align: middle;
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
 }
 
 .title {
-	font-weight: 500;
-	font-size: 1rem;
-	color: black;
-	cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
 }

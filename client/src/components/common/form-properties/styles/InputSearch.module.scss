@@ -2,80 +2,80 @@
 
 /* 기본 입력 필드 컨테이너 */
 .inputContainer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	position: relative;
-	width: 150px;
-	transition: all 0.3s ease-in-out;
-	background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 150px;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
 }
 
 /* 검색 입력 필드 기본 스타일 */
 .input {
-	font-size: 14px;
-	font-weight: 300;
-	outline: none;
-	transition: all 0.3s ease-in-out;
-	background: transparent;
-	border: none;
-	width: 100%;
-	padding: 8px 30px 8px 12px;
-	border-bottom: 1px solid $gray4;
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 8px 30px 8px 12px;
+  border-bottom: 1px solid $gray4;
 }
 
 /** Type 1: inHeader (헤더 내부 검색창) */
 .inHeader {
-	@extend .input;
-	border-radius: 25px;
-	border: 2px solid $u-orange;
+  @extend .input;
+  border-radius: 25px;
+  border: 2px solid $primary-green;
 }
 
 /** Type 2: inList (리스트 내부 검색창) */
 .inList {
-	@extend .input;
-	text-align: left;
-	border-bottom: 1px solid $gray4; // 기본 밑줄 회색
+  @extend .input;
+  text-align: left;
+  border-bottom: 1px solid $gray4; // 기본 밑줄 회색
 
-	&::placeholder {
-		color: $gray4;
-	}
-	&:focus {
-		border-bottom: 1px solid $u-orange; // 포커스 시 밑줄 주황색
-	}
+  &::placeholder {
+    color: $gray4;
+  }
+  &:focus {
+    border-bottom: 1px solid $primary-green; // 포커스 시 밑줄 주황색
+  }
 }
 
 /* 검색 버튼 */
 .searchButton {
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	position: absolute;
-	right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
 }
 
 /* 검색 아이콘 */
 .icon {
-	span {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-		color: $gray5;
-		font-size: 15px;
-		transition: color 0.3s ease-in-out;
-		vertical-align: middle;
-	}
+    color: $gray5;
+    font-size: 15px;
+    transition: color 0.3s ease-in-out;
+    vertical-align: middle;
+  }
 }
 
 .inHeader + .searchButton .icon {
-	color: $u-orange;
+  color: $primary-green;
 }
 
 /* 반응형 */
 @media (max-width: 600px) {
-	.inputContainer {
-		display: none;
-	}
+  .inputContainer {
+    display: none;
+  }
 }

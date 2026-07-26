@@ -2,163 +2,163 @@
 @use "@/styles/common" as *;
 
 .container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
 }
 
 .treeContainer {
-	display: flex;
-	flex-direction: row;
-	height: 100%;
-	width: 100%;
-	margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin-left: 1rem;
 
-	.treeWrapper {
-		flex: 1;
-		overflow-y: auto;
-		border-right: 1px solid $gray3;
-	}
+  .treeWrapper {
+    flex: 1;
+    overflow-y: auto;
+    border-right: 1px solid $primary-gray;
+  }
 
-	.empsWapper {
-		flex: 1;
-		overflow-y: auto;
-	}
+  .empsWapper {
+    flex: 1;
+    overflow-y: auto;
+  }
 
-	.searchInput {
-		display: flex;
-		flex-direction: row;
-		justify-content: start;
-		align-items: center;
-		gap: 0.5rem;
-		padding: 0.2rem;
-		width: 12vw;
-		border-bottom: 1px solid $gray3;
-		background-color: white;
+  .searchInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem;
+    width: 12vw;
+    border-bottom: 1px solid $primary-gray;
+    background-color: white;
 
-		input {
-			font-size: 0.85rem;
-			border: none;
-			outline: none;
-			color: $gray5;
-			background-color: transparent;
-		}
+    input {
+      font-size: 0.85rem;
+      border: none;
+      outline: none;
+      color: $gray5;
+      background-color: transparent;
+    }
 
-		.clearButton {
-			cursor: pointer;
-			color: $gray5;
-			font-size: 0.85rem;
-		}
-	}
+    .clearButton {
+      cursor: pointer;
+      color: $gray5;
+      font-size: 0.85rem;
+    }
+  }
 }
 
 .emps {
-	margin-left: 10;
-	cursor: pointer;
+  margin-left: 10;
+  cursor: pointer;
 }
 
 .nodeRow {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	font-size: 0.85rem;
-	margin: 2px 0;
-	gap: 0.5rem;
-	cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 2px 0;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
 .emp {
-	@extend .nodeRow;
-	font-weight: 400;
+  @extend .nodeRow;
+  font-weight: 400;
 }
 .dept {
-	@extend .nodeRow;
-	font-weight: 600;
+  @extend .nodeRow;
+  font-weight: 600;
 }
 
 // 선택된 참석자
 .selectedEmpsWrapper {
-	padding: 0.8rem 0.5rem 0 0.5rem;
-	z-index: 1;
-	background-color: white;
-	margin-bottom: 20px;
+  padding: 0.8rem 0.5rem 0 0.5rem;
+  z-index: 1;
+  background-color: white;
+  margin-bottom: 20px;
 
-	.selectedEmpWrapper {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 5px;
+  .selectedEmpWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 
-		.selectedEmps {
-			border: 1px solid $gray5;
-			border-radius: 4px;
-			padding: 0.2rem 0.7rem;
-			display: flex;
-			align-items: center;
-			gap: 5px;
-			font-size: 0.85rem;
-		}
-	}
+    .selectedEmps {
+      border: 1px solid $gray5;
+      border-radius: 4px;
+      padding: 0.2rem 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.85rem;
+    }
+  }
 }
 
 .closeButton {
-	color: $gray5;
-	cursor: pointer;
-	display: inline-block;
-	margin-left: 0.3rem;
-	font-weight: 200;
+  color: $gray5;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-weight: 200;
 }
 
 .folderIcon {
-	color: $u-navy;
-	vertical-align: middle;
-	margin-right: 6px;
+  color: $black;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 .starIcon {
-	color: $u-orange;
-	vertical-align: middle;
-	margin-right: 1px;
+  color: $primary-green;
+  vertical-align: middle;
+  margin-right: 1px;
 }
 
 // 모달 밖 대상 검색 공간
 .searchEmpWrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: start;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 
 // 모달 밖 선택된 부서/직원들
 .searchedEmps {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 5px;
-	justify-content: start;
-	align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: start;
+  align-items: center;
 }
 
 // 모달 밖 선택된 부서/직원 하나하나
 .selectedItem {
-	display: flex;
-	gap: 2px;
-	border: 0.5px solid $gray4;
-	border-radius: 25px;
-	margin: 0.5px 1.5px;
-	padding: 0.2rem 0.5rem;
+  display: flex;
+  gap: 2px;
+  border: 0.5px solid $gray4;
+  border-radius: 25px;
+  margin: 0.5px 1.5px;
+  padding: 0.2rem 0.5rem;
 
-	span {
-		font-size: 0.75rem;
-		font-weight: 350;
-	}
+  span {
+    font-size: 0.75rem;
+    font-weight: 350;
+  }
 }
 
 .inputEmp {
-	font-size: 0.8rem;
-	font-weight: 300;
-	color: $gray5;
-	width: 100px;
-	background: transparent;
-	box-sizing: border-box;
-	border: transparent;
-	border-bottom: 1px solid $gray4;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: $gray5;
+  width: 100px;
+  background: transparent;
+  box-sizing: border-box;
+  border: transparent;
+  border-bottom: 1px solid $gray4;
 }

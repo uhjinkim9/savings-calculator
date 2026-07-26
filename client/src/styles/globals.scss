@@ -1,47 +1,47 @@
 @use "./variables.scss" as *;
 
 html {
-	font-family: $pretendard;
+  font-family: $pretendard;
 }
 
 html,
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: center;
-	min-height: 100%;
-	height: auto;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
 }
 
 body {
-	background: $background-color;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	// min-height: 100vh;
+  background: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // min-height: 100vh;
 }
 
 body.bg-gray {
-	background-color: $background-color;
+  background-color: $background-color;
 }
 
 body.bg-white {
-	background-color: white;
+  background-color: white;
 }
 
 @media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
+  html {
+    color-scheme: dark;
+  }
 }
 
 a,
 a:visited,
 a:hover,
 a:active {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 input,
@@ -51,56 +51,56 @@ select,
 option,
 span,
 div {
-	caret-color: $u-orange;
-	font-family: $pretendard;
+  caret-color: $primary-green;
+  font-family: $pretendard;
 }
 
 ::selection {
-	background-color: $u-orange; /* 원하는 색상으로 변경 */
-	color: white; /* 선택된 글자의 색상 */
+  background-color: $primary-green; /* 원하는 색상으로 변경 */
+  color: white; /* 선택된 글자의 색상 */
 }
 
 :focus {
-	outline: none;
+  outline: none;
 }
 
 /* 스크롤바 전체 */
 ::-webkit-scrollbar {
-	width: 0.9rem;
+  width: 0.9rem;
 }
 
 /* 스크롤바 트랙 (배경) */
 ::-webkit-scrollbar-track {
-	background: transparent; // 트랙은 투명
-	border-radius: 10px;
+  background: transparent; // 트랙은 투명
+  border-radius: 10px;
 }
 
 /* 스크롤바 썸 (움직이는 부분) */
 ::-webkit-scrollbar-thumb {
-	background-color: #d9d9d9; // 더 진한 회색
-	background-clip: padding-box;
-	border-radius: 10px;
-	border: 0.2rem solid #ffffff00;
+  background-color: #d9d9d9; // 더 진한 회색
+  background-clip: padding-box;
+  border-radius: 10px;
+  border: 0.2rem solid #ffffff00;
 }
 
 /* 스크롤바 hover 시 */
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #b0b0b0; // 더 진한 회색
-	transition: 0.3s;
+  background-color: #b0b0b0; // 더 진한 회색
+  transition: 0.3s;
 }
 
 /* 알림 띄울 위치 */
 #alertRoot {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 99999;
-	display: flex;
-	flex-direction: column-reverse;
-	gap: 10px;
-	pointer-events: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  pointer-events: none;
 }
 
 #alertRoot > * {
-	pointer-events: auto;
+  pointer-events: auto;
 }

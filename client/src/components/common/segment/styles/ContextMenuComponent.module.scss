@@ -37,7 +37,7 @@
 	li:first-child {
 		cursor: default;
 		font-weight: bold;
-		border-bottom: 1px solid $gray3; // 얇은 검정 경계선
+		border-bottom: 1px solid $primary-gray; // 얇은 검정 경계선
 		&:hover {
 			background-color: #fff; // hover 무시
 		}

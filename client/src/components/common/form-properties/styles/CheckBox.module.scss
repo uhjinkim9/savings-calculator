@@ -72,8 +72,8 @@
   }
 
   .input:checked + .normalCheckmark {
-    background-color: $u-orange;
-    border-color: $u-orange;
+    background-color: $primary-green;
+    border-color: $primary-green;
   }
 }
 
@@ -118,11 +118,11 @@
 
   & .input:checked + .normalCheckmark .icon {
     // '&'는 부모 셀렉터(.mark) 참조
-    color: $u-orange;
+    color: $primary-green;
     transition: all 0.3s ease;
   }
   & .input:checked + .normalCheckmark {
-    border: 1px solid $u-orange;
+    border: 1px solid $primary-green;
   }
 }
 
